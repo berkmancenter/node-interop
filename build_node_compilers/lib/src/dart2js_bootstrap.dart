@@ -68,10 +68,12 @@ https://github.com/dart-lang/build/blob/master/docs/faq.md#how-can-i-resolve-ski
   }
 
   var librariesSpec = p.joinAll([sdkDir, 'lib', 'libraries.json']);
+  log.info('Running `dart compile js` with ${args.join(' ')}\n');
   var result = await Process.run(
       p.join(sdkDir, 'bin', 'dart'),
       [
-        p.join(sdkDir, 'bin', 'snapshots', 'dart2js.dart.snapshot'),
+        'compile',
+        'js',
         '--libraries-spec=$librariesSpec',
         ...args,
       ],
