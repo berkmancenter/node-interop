@@ -35,6 +35,7 @@ final dart2jsPlatform = DartPlatform.register('dart2js_node', [
   'indexed_db',
   'js',
   'js_util',
+  'js_interop',
   'math',
   'svg',
   'typed_data',
